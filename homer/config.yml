@@ -1,0 +1,84 @@
+---
+# Homepage configuration
+# See https://fontawesome.com/v5/search for icons options
+
+# externalConfig: https://example.com/server-luci/config.yaml
+
+title: "Dashboard"
+subtitle: "Home"
+documentTitle: "Dashboard"
+
+header: true
+footer: false
+
+columns: "auto"
+connectivityCheck: true
+
+defaults:
+  layout: list
+  colorTheme: dark
+
+theme: default
+
+colors:
+  dark:
+    highlight-primary: "#00aa0b"
+    highlight-secondary: "#00b918"
+    highlight-hover: "#47c447"
+
+links: []
+
+services:
+  - name: "Self-hosted Services"
+    icon: "fa-solid fa-user"
+    items:
+      - name: "SearXNG"
+        icon: "fa-solid fa-magnifying-glass"
+        subtitle: "Metasearch engine"
+        url: "https://search.arsenm.dev/"
+      - name: "Nextcloud"
+        icon: "fa-solid fa-cloud"
+        subtitle: "Cloud file storage"
+        url: "https://nextcloud.arsenm.dev/"
+      - name: "Home Assistant"
+        icon: "fa-solid fa-house"
+        subtitle: "Home automation hub"
+        url: "https://hass.arsenm.dev/"
+      - name: "Gitea"
+        icon: "fa-solid fa-code-branch"
+        subtitle: "Web interface for Git"
+        url: "https://gitea.arsenm.dev/"
+      - name: "Minio"
+        icon: "fa-solid fa-box"
+        subtitle: "Open source S3 implementation"
+        url: "https://minio.arsenm.dev/"
+      - name: "LMS"
+        icon: "fa-solid fa-music"
+        subtitle: "Lightweight music server"
+        url: "https://music.arsenm.dev/"
+  - name: "Piracy"
+    icon: "fa-solid fa-skull-crossbones"
+    items:
+      - name: "LibGen"
+        icon: "fa-solid fa-book"
+        subtitle: "Database of pirated books"
+        url: "https://whereislibgen.now.sh/go"
+      - name: "Sci-Hub"
+        icon: "fa-solid fa-flask"
+        subtitle: "Database of pirated scientific papers"
+        url: "https://sci-hub.now.sh/"
+  - name: "Administration"
+    icon: "fa-solid fa-wrench"
+    items:
+      - name: "Traefik"
+        icon: "fa fa-globe"
+        subtitle: "Reverse proxy"
+        url: "https://traefik.arsenm.dev/"
+      - name: "Nomad"
+        icon: "fa-solid fa-circle-nodes"
+        subtitle: "Cluster orchestrator"
+        url: "https://nomad.arsenm.dev/"
+      - name: "Consul"
+        icon: "fa-solid fa-database"
+        subtitle: "Service discovery and K/V store"
+        url: "https://consul.arsenm.dev/"
