@@ -4,7 +4,7 @@ This repository contains my [Nomad](https://github.com/hashicorp/nomad) and [Con
 
 Nomad is an orchestrator. It orchestrates a cluster of multiple computers to perform a certain task. Consul is a service discovery solution as well as a key/value store. Nomad seamlessly integrates with Consul to provide a cohesive solution that works really well.
 
-I have a cluster of 8 [Raspberry Pi 4s](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/) (4x 1GB, 4x 2GB RAM), 2 2GB [Pine H64s](https://www.pine64.org/pine-h64-ver-b/), 1 2GB [RockPro64](https://www.pine64.org/rockpro64/), and a 2012 Mac Mini with an i7 that I've upgraded with a 1TB SSD and 16GB of RAM. I've also pre-ordered a 16GB [Radxa Rock 5 Model B](https://wiki.radxa.com/Rock5/5b).
+I have a cluster of 8 [Raspberry Pi 4s](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/) (4x 1GB, 4x 2GB RAM), 2 2GB [Pine H64s](https://www.pine64.org/pine-h64-ver-b/), 1 2GB [RockPro64](https://www.pine64.org/rockpro64/), a 16GB [Radxa Rock 5 Model B](https://wiki.radxa.com/Rock5/5b), and a 2012 Mac Mini with an i7 that I've upgraded with a 1TB SSD and 16GB of RAM.
 
 I'd originally planned to use Kubernetes on this cluster, but due to the low power and especially low RAM of many of my nodes, Kubernetes would either take up nearly all the resources or freeze the nodes entirely, forcing a hard reboot. Recently, I found Nomad, which is far more lightweight, while providing more features. In my opinion, the only downside is the fact that Kubernetes has a much bigger community.
 
