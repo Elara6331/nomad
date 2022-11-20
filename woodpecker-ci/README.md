@@ -7,3 +7,5 @@ These files contain URLs and server IPs that will need to be changed, as well as
 Woodpecker requires one volume to store its database. This volume should be called `woodpecker` and it should be read/write, not readonly.
 
 Once Woodpecker starts, you should be able to go to it, and log in via your Gitea account.
+
+The woodpecker agent file will start the agent on all nodes with the `woodpecker_agent` custom metadata value set to `true`. You can look at the following documentation for an example of how to set metadata: https://developer.hashicorp.com/nomad/docs/configuration/client#custom-metadata-network-speed-and-node-class
