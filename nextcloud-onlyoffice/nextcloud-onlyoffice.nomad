@@ -91,6 +91,10 @@ job "nextcloud" {
     task "onlyoffice" {
       driver = "docker"
 
+      env {
+      	JWT_ENABLED = false
+      }
+
       volume_mount {
         volume      = "onlyoffice-data"
         destination = "/var/www/onlyoffice/Data"
