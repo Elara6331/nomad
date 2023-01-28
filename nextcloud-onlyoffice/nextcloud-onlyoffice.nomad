@@ -70,6 +70,24 @@ job "nextcloud" {
       }
     }
 
+    task "nextcloud-cron" {
+      lifecycle {
+        hook = "poststart"
+      }
+
+      volume_mount {
+        volume      = "nextcloud-html"
+        destination = "/var/www/html"
+        read_only   = false
+      }
+
+      driver = "docker"
+      config {
+        image   = "nextcloud:apache"
+        command = "/cron.sh"
+      }
+    }
+
     task "onlyoffice" {
       driver = "docker"
 
