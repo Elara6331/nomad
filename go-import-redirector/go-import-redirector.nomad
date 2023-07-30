@@ -18,7 +18,7 @@ job "go-import-redirector" {
         args = [
           "-addr", ":${NOMAD_PORT_http}",
           "go.elara.ws/*",
-          "https://gitea.elara.ws/Arsen6331/*"
+          "https://gitea.elara.ws/Elara6331/*"
         ]
       }
 
