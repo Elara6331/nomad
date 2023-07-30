@@ -43,12 +43,12 @@ job "traefik" {
       	"traefik.http.routers.http-catchall.middlewares=https-redirect",
 
       	// Forward requests to protected services to Authelia. Remove this if not running Authelia.
-      	"traefik.http.middlewares.authelia.forwardauth.address=http://<authelia address>/api/verify?rd=https://auth.arsenm.dev/",
+      	"traefik.http.middlewares.authelia.forwardauth.address=http://<authelia address>/api/verify?rd=https://auth.elara.ws/",
       	"traefik.http.middlewares.authelia.forwardauth.trustforwardheader=true",
       	"traefik.http.middlewares.authelia.forwardauth.authresponseheaders=Remote-User, Remote-Groups",
 
       	// Expose Traefik API with authentication. Remove this if not running Authelia.
-      	"traefik.http.routers.traefik.rule=Host(`traefik.arsenm.dev`)",
+      	"traefik.http.routers.traefik.rule=Host(`traefik.elara.ws`)",
       	"traefik.http.routers.traefik.tls.certResolver=letsencrypt",
       	"traefik.http.routers.traefik.middlewares=authelia",
       ]

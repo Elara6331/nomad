@@ -48,7 +48,7 @@ job "gitea" {
         RUN_MODE                        = "prod"
         SSH_DOMAIN                      = "CHANGE ME"
         SSH_PORT                        = "$NOMAD_PORT_ssh"
-        ROOT_URL                        = "https://gitea.arsenm.dev/"
+        ROOT_URL                        = "https://gitea.elara.ws/"
         USER_UID                        = "1002"
         USER_GID                        = "1002"
         GITEA__server__START_SSH_SERVER = "true"
@@ -65,7 +65,7 @@ job "gitea" {
 
         tags = [
           "traefik.enable=true",
-          "traefik.http.routers.gitea.rule=Host(`gitea.arsenm.dev`)",
+          "traefik.http.routers.gitea.rule=Host(`gitea.elara.ws`)",
           "traefik.http.routers.gitea.tls.certResolver=letsencrypt"
         ]
       }

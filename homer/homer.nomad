@@ -37,7 +37,7 @@ job "homer" {
 
 				tags = [
 					"traefik.enable=true",
-					"traefik.http.routers.homer.rule=Host(`dashboard.arsenm.dev`)",
+					"traefik.http.routers.homer.rule=Host(`dashboard.elara.ws`)",
 					"traefik.http.routers.homer.tls.certResolver=letsencrypt",
 				]
 			}

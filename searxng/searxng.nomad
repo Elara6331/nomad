@@ -15,7 +15,7 @@ job "searxng" {
 
       env {
         BIND_ADDRESS     = "0.0.0.0:${NOMAD_PORT_searx}"
-        SEARXNG_BASE_URL = "https://search.arsenm.dev"
+        SEARXNG_BASE_URL = "https://search.elara.ws"
         SEARXNG_SECRET   = "CHANGE ME"
       }
 
@@ -39,7 +39,7 @@ job "searxng" {
 
         tags = [
           "traefik.enable=true",
-          "traefik.http.routers.searxng.rule=Host(`search.arsenm.dev`)",
+          "traefik.http.routers.searxng.rule=Host(`search.elara.ws`)",
           "traefik.http.routers.searxng.tls.certResolver=letsencrypt",
           "traefik.http.routers.searxng.middlewares=searxng-headers",
           "traefik.http.middlewares.searxng-headers.headers.customrequestheaders.X-Robots-Tag=noindex, noarchive, nofollow"

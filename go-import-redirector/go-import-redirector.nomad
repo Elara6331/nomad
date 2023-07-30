@@ -17,13 +17,13 @@ job "go-import-redirector" {
         command = "local/exec.sh"
         args = [
           "-addr", ":${NOMAD_PORT_http}",
-          "go.arsenm.dev/*",
-          "https://gitea.arsenm.dev/Arsen6331/*"
+          "go.elara.ws/*",
+          "https://gitea.elara.ws/Arsen6331/*"
         ]
       }
 
       artifact {
-        source = "https://api.minio.arsenm.dev/adl/go-import-redirector.tar.gz"
+        source = "https://api.minio.elara.ws/adl/go-import-redirector.tar.gz"
       }
 
       resources {
@@ -37,7 +37,7 @@ job "go-import-redirector" {
 
         tags = [
           "traefik.enable=true",
-          "traefik.http.routers.go-import-redirector.rule=Host(`go.arsenm.dev`)",
+          "traefik.http.routers.go-import-redirector.rule=Host(`go.elara.ws`)",
           "traefik.http.routers.go-import-redirector.tls.certResolver=letsencrypt"
         ]
       }

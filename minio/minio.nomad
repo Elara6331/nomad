@@ -45,7 +45,7 @@ job "minio" {
         name = "minio"
         tags = [
           "traefik.enable=true",
-          "traefik.http.routers.minio.rule=Host(`minio.arsenm.dev`)",
+          "traefik.http.routers.minio.rule=Host(`minio.elara.ws`)",
           "traefik.http.routers.minio.tls.certResolver=letsencrypt"
         ]
 
@@ -66,7 +66,7 @@ job "minio" {
 
         tags = [
           "traefik.enable=true",
-          "traefik.http.routers.minio-api.rule=Host(`api.minio.arsenm.dev`)",
+          "traefik.http.routers.minio-api.rule=Host(`api.minio.elara.ws`)",
           "traefik.http.routers.minio-api.tls.certResolver=letsencrypt"
         ]
       }

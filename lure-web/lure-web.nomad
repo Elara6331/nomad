@@ -31,7 +31,7 @@ job "lure-web" {
         port = "api"
         tags = [
           "traefik.enable=true",
-          "traefik.http.routers.lure-api-server.rule=Host(`api.lure.arsenm.dev`)",
+          "traefik.http.routers.lure-api-server.rule=Host(`api.lure.elara.ws`)",
           "traefik.http.routers.lure-api-server.tls.certresolver=letsencrypt"
         ]
 
@@ -58,7 +58,7 @@ job "lure-web" {
         port = "http"
         tags = [
           "traefik.enable=true",
-          "traefik.http.routers.lure-web.rule=Host(`lure.arsenm.dev`)",
+          "traefik.http.routers.lure-web.rule=Host(`lure.elara.ws`)",
           "traefik.http.routers.lure-web.tls.certresolver=letsencrypt",
         ]
       }

@@ -50,7 +50,7 @@ job "lms" {
 
         tags = [
           "traefik.enable=true",
-          "traefik.http.routers.lms.rule=Host(`music.arsenm.dev`)",
+          "traefik.http.routers.lms.rule=Host(`music.elara.ws`)",
           "traefik.http.routers.lms.tls.certResolver=letsencrypt",
         ]
       }

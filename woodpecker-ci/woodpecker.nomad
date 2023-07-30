@@ -43,9 +43,9 @@ job "woodpecker" {
 
       env {
         WOODPECKER_OPEN = "true"
-        WOODPECKER_HOST = "https://ci.arsenm.dev"
+        WOODPECKER_HOST = "https://ci.elara.ws"
         WOODPECKER_GITEA = "true"
-        WOODPECKER_GITEA_URL = "https://gitea.arsenm.dev"
+        WOODPECKER_GITEA_URL = "https://gitea.elara.ws"
         WOODPECKER_GITEA_CLIENT = "CHANGE ME"
         WOODPECKER_GITEA_SECRET = "CHANGE ME"
         WOODPECKER_AGENT_SECRET = "CHANGE ME"
@@ -57,7 +57,7 @@ job "woodpecker" {
 
         tags = [
           "traefik.enable=true",
-          "traefik.http.routers.woodpecker-ci.rule=Host(`ci.arsenm.dev`)",
+          "traefik.http.routers.woodpecker-ci.rule=Host(`ci.elara.ws`)",
           "traefik.http.routers.woodpecker-ci.tls.certResolver=letsencrypt"
         ]
       }

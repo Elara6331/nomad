@@ -45,7 +45,7 @@ job "authelia" {
 
         tags = [
           "traefik.enable=true",
-          "traefik.http.routers.authelia.rule=Host(`auth.arsenm.dev`)",
+          "traefik.http.routers.authelia.rule=Host(`auth.elara.ws`)",
           "traefik.http.routers.authelia.tls.certResolver=letsencrypt",
         ]
       }

@@ -1,6 +1,6 @@
 # LURE Web
 
-This nomad file is for one of my other projects, [LURE](https://gitea.arsenm.dev/Arsen6331/lure). Specifically, it runs [LURE's Web interface](https://lure.arsenm.dev) and its backend API server.
+This nomad file is for one of my other projects, [LURE](https://gitea.elara.ws/Arsen6331/lure). Specifically, it runs [LURE's Web interface](https://lure.elara.ws) and its backend API server.
 
 This job requires no volumes. The only thing that needs to be changed is the Github API secret. This is for a Github webhook, so that the API server knows when the LURE repo changes so it can update its database.
 

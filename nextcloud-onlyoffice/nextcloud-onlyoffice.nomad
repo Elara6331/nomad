@@ -33,7 +33,7 @@ job "nextcloud" {
       env {
         NEXTCLOUD_ADMIN_USER      = "CHANGE ME"
         NEXTCLOUD_ADMIN_PASSWORD  = "CHANGE ME"
-        NEXTCLOUD_TRUSTED_DOMAINS = "nextcloud.arsenm.dev"
+        NEXTCLOUD_TRUSTED_DOMAINS = "nextcloud.elara.ws"
       }
 
       volume_mount {
@@ -52,7 +52,7 @@ job "nextcloud" {
         port = "http"
         tags = [
           "traefik.enable=true",
-          "traefik.http.routers.nextcloud.rule=Host(`nextcloud.arsenm.dev`)",
+          "traefik.http.routers.nextcloud.rule=Host(`nextcloud.elara.ws`)",
           "traefik.http.routers.nextcloud.tls.certresolver=letsencrypt"
         ]
 
@@ -112,7 +112,7 @@ job "nextcloud" {
         port = "onlyoffice-http"
         tags = [
           "traefik.enable=true",
-          "traefik.http.routers.onlyoffice.rule=Host(`onlyoffice.arsenm.dev`)",
+          "traefik.http.routers.onlyoffice.rule=Host(`onlyoffice.elara.ws`)",
           "traefik.http.routers.onlyoffice.tls.certresolver=letsencrypt",
           "traefik.http.routers.onlyoffice.middlewares=onlyoffice-headers",
           "traefik.http.middlewares.onlyoffice-headers.headers.customrequestheaders.X-Forwarded-Proto=https"
